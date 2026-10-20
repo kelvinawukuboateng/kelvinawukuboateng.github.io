@@ -135,6 +135,8 @@ h3 { font-size: var(--step-lead); line-height: 1.1; letter-spacing: -0.01em; fon
   margin-left: -0.05em;
   max-width: 11ch;
 }
+.hero-title { display: flex; flex-direction: column; gap: 18px; }
+.roles { font-size: var(--step-small); font-weight: 600; letter-spacing: .16em; text-transform: uppercase; color: var(--muted); }
 .lede { font-size: var(--step-lead); line-height: 1.38; max-width: 40ch; color: var(--fg); }
 .cta { display: flex; flex-wrap: wrap; gap: 12px; }
 .coords { position: absolute; right: var(--gut-r); bottom: 24px; z-index: 2; font-size: var(--step-small); color: var(--muted); text-align: right; line-height: 1.6; font-variant-numeric: tabular-nums; }
