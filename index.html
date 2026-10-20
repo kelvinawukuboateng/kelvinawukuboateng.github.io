@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Kelvin Awuku-Boateng</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Kelvin Awuku-Boateng is a data engineer in Accra, Ghana, building IoT, GIS and machine-learning pipelines.">
+<meta name="theme-color" content="#060912">
+<meta property="og:title" content="Kelvin Awuku-Boateng · Data Engineer">
+<meta property="og:description" content="IoT telemetry pipelines for energy and water, census-grade GIS and machine learning. Based in Accra, Ghana.">
+<meta property="og:type" content="website">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<script>
+  /* Set the theme before first paint: saved choice, else dark. */
+  (function(){var t=null;try{t=localStorage.getItem('kab-theme');}catch(e){}
+    var r=document.documentElement;
+    if(t==='light'||t==='dark'){r.setAttribute('data-theme',t);}
+    else if(!r.hasAttribute('data-theme')){r.setAttribute('data-theme','dark');}})();
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Barlow:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+
+<nav class="nav" aria-label="Main">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Kelvin Awuku-Boateng, back to top">KAB<span>.</span></a>
+    <ul>
+      <li><a href="#work">Work</a></li>
+      <li><a href="#stack">Stack</a></li>
+      <li class="hide-sm"><a href="#experience">Experience</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch to light mode">
+      <svg class="i-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.5"/><g stroke-width="2" stroke-linecap="round"><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8"/></g></svg>
+      <svg class="i-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 14.2A8.5 8.5 0 0 1 9.8 3.5a8.5 8.5 0 1 0 10.7 10.7z"/></svg>
+    </button>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <canvas id="terrain" aria-hidden="true"></canvas>
+  <div class="wrap">
+    <h1>Kelvin<br>Awuku&#8209;Boateng</h1>
+    <p class="lede">Data engineer in Accra. I build the pipelines that carry sensor, census and market data from raw feeds into dashboards people act on. For European utilities: IoT telemetry for solar power plants, water networks and smart buildings. In Ghana: the maps behind the 2021 national census.</p>
+    <div class="cta">
+      <a class="btn primary" href="#work">See projects</a>
+      <a class="btn" href="https://github.com/iamjustkay" target="_blank" rel="noopener">GitHub ↗</a>
+      <a class="btn" href="https://www.linkedin.com/in/kelvin-awuku-boateng" target="_blank" rel="noopener">LinkedIn ↗</a>
+    </div>
+  </div>
+  <p class="coords" aria-hidden="true"><span class="dot"></span> Accra, Ghana · 5.6037° N, 0.1870° W<br>Working remotely with Logroño, Spain</p>
+</header>
+
+<div class="stats">
+  <div class="stat"><b>4+ years</b><span>Python, SQL and geospatial engineering</span></div>
+  <div class="stat"><b>1,500+</b><span>Digital maps built for the 2021 Ghana census</span></div>
+  <div class="stat"><b>93.05%</b><span>ROC-AUC on the client subscription model</span></div>
+  <div class="stat"><b>5.2M</b><span>Cross-border freight rows analysed</span></div>
+</div>
+
+<section id="work">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Selected work</h2>
+      <p>Every screen in the ring is drawn from the project's own dataset. Drag to turn it, then pick a screen to open the details.</p>
+    </div>
+  </div>
+  <div class="stage" id="stage">
+    <canvas id="ring" aria-label="3D ring of project previews. The project list below gives keyboard access."></canvas>
+    <p class="now" id="nowName" aria-live="polite"></p>
+    <div class="stage-ui">
+      <span class="hint">Drag to turn · click a screen to open</span>
+      <div class="arrows">
+        <button class="arrow" id="prev" type="button" aria-label="Previous project">←</button>
+        <button class="arrow" id="next" type="button" aria-label="Next project">→</button>
+      </div>
+    </div>
+  </div>
+  <div class="wrap">
+    <ul class="index" id="index"></ul>
+  </div>
+</section>
+
+<section id="stack">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Tech stack</h2>
+      <p>The tools I use every week. Push them around with your cursor or finger; hover one to see its name.</p>
+    </div>
+  </div>
+  <div class="balls" id="balls">
+    <canvas id="ballsCanvas" aria-hidden="true"></canvas>
+    <div class="ball-tip" id="ballTip" hidden></div>
+  </div>
+  <div class="wrap">
+    <dl class="stack-groups" id="stackGroups"></dl>
+  </div>
+</section>
+
+<section id="experience">
+  <div class="wrap cv">
+    <div class="cv-intro">
+      <h2>Experience</h2>
+      <p>From field mapping in Accra to production data agents for energy, water and smart-city platforms. The constant is turning messy, distributed data into something reliable.</p>
+    </div>
+    <div class="jobs">
+      <article class="job">
+        <p class="when">Sep 2025 – now</p>
+        <div>
+          <h3>Bosonit</h3>
+          <p class="role">Data Engineer · Logroño, Spain (remote)</p>
+          <ul>
+            <li>Architected Python data agents that pull IoT sensor data from REST APIs into cloud monitoring platforms across multiple production sites.</li>
+            <li>Modelled and synced device hierarchies for solar PV plants (inverters, power transformers, trackers, weather stations) into the IoT platform.</li>
+            <li>Orchestrated real-time and batch ETL with scheduling, validation and error handling.</li>
+            <li>Built Dockerized microservices consuming Kafka and forwarding to cloud IoT brokers, with structured logging and fault tolerance.</li>
+            <li>Built Grafana monitoring dashboards, managed schema migrations with Alembic and contributed to CI/CD.</li>
+          </ul>
+        </div>
+      </article>
+      <article class="job">
+        <p class="when">Sep 2020 – Jun 2023</p>
+        <div>
+          <h3>Ghana Statistical Service</h3>
+          <p class="role">GIS Analyst / Technician · Accra</p>
+          <ul>
+            <li>Engineered Python and SQL ETL pipelines that cut manual processing errors by 60%.</li>
+            <li>Maintained the spatial databases behind the 2021 Population and Housing Census, producing 1,500+ digital maps.</li>
+            <li>Trained 10+ field staff on ArcGIS workflows, reducing survey delays by 25%.</li>
+          </ul>
+        </div>
+      </article>
+      <article class="job">
+        <p class="when">Jun – Aug 2019</p>
+        <div>
+          <h3>Sahara Natural Resources</h3>
+          <p class="role">GIS Intern · Accra</p>
+          <ul>
+            <li>Digitised 10+ exploration maps and standardised raw data into KMZ/KML, speeding project planning by 20%.</li>
+            <li>Streamlined a geochemical data pipeline, removing three manual steps.</li>
+          </ul>
+        </div>
+      </article>
+    </div>
+  </div>
+  <div class="wrap">
+    <div class="edu">
+      <h3 class="edu-title">Education</h3>
+      <div><span class="yr">2023 – 2024</span><b>MSc Computer Science</b><span>University of Ghana, Legon</span></div>
+      <div><span class="yr">2016 – 2020</span><b>BA Geography, Sociology minor</b><span>University of Ghana, Legon</span></div>
+      <div><span class="yr">2023</span><b>Certificate, Data Science</b><span>GhanaTechLab</span></div>
+      <div><span class="yr">2022</span><b>Certificate, IT Entrepreneurship</b><span>Openlabs Ghana</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <h2>Have data that needs a pipeline?</h2>
+    <p class="contact-lede">I'm open to data engineering roles, remote or with relocation. Email is the fastest way to reach me.</p>
+    <div class="reach">
+      <span class="email" id="email">kelvinawukuboateng@gmail.com</span>
+      <button class="btn primary" id="copy" type="button">Copy email</button>
+      <a class="btn" href="https://www.linkedin.com/in/kelvin-awuku-boateng" target="_blank" rel="noopener">LinkedIn ↗</a>
+      <a class="btn" href="https://github.com/iamjustkay" target="_blank" rel="noopener">GitHub ↗</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p class="foot-name">Kelvin Awuku-Boateng</p>
+    <p class="foot-meta">© 2026 · Accra, Ghana · Built with Three.js</p>
+  </div>
+</footer>
+
+<dialog id="dlg" aria-labelledby="dlgTitle">
+  <button class="close" id="dlgClose" type="button" aria-label="Close">×</button>
+  <img class="dlg-img" id="dlgImg" alt="">
+  <div class="dlg-body">
+    <div>
+      <p class="dlg-kicker" id="dlgKicker"></p>
+      <h3 id="dlgTitle"></h3>
+      <p id="dlgSummary"></p>
+      <ul id="dlgPoints"></ul>
+    </div>
+    <div class="dlg-side">
+      <div class="metrics" id="dlgMetrics"></div>
+      <p class="dlg-stack" id="dlgStack"></p>
+      <div class="links" id="dlgLinks"></div>
+    </div>
+  </div>
+</dialog>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script type="module" src="assets/js/main.js"></script>
+</body>
+</html>
